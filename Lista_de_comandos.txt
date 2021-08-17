@@ -1,0 +1,124 @@
+$ git config --global user.name "Seu nome"
+    |-> Declarar o nome
+
+
+$ git config --global user.email "seu@email.com"
+    |-> Declarar o email
+
+
+$ git config --list
+    |-> Ve as configurações
+
+
+$ mkdir Nomedapasta
+    |-> Cria pasta
+
+
+$ cd Nomedapasta
+    |-> Entra na pasta
+
+
+$ git init
+    |-> Cria o arquivo GIT
+
+
+$ vi Readme.md
+    |-> Cria e edita o arquivo Readme pelo Vim editor
+    |_Cóidigo do Vim editor
+        |-> aperta 'i' para editar
+        |-> Aperta 'esc' para sair do editor
+        |-> digita ":wq" para sair e salvar o arquivo
+
+
+$ code Readme.md
+    |-> Cria e edita o arquivo Readme pelo VS Code
+
+
+$ git stauts 
+    |-> Reporta como estava o repositorio no momento
+
+
+$ git add nomedoarquivo
+    |-> Adiciona o arquivo no git
+
+
+$ git commit -am "Seu comentario da versão" (o -am é para adicioanr todos modificado mais a mensagem)
+    |-> Pegua os arquivos e transforma eles em uma versão 
+
+
+$ git log
+    |-> Ve o historico de versão e arquivos mudados 
+    |_Opções
+        |->  --decorate (mostra masi iunformações)
+        |->  --author"Mar" (fais um filto por autor)
+        |->  --graph (Mostra em forma grafica o que que ta acontecendo com as versões)
+
+
+$ git shorlog
+    |-> mostra em ordem alfabetica quem fez alteração, quantos commit fez e quias foram
+    |_Opções
+        |->  --sn (mostra só as pessoas e quantidade de commit adcionadas)
+
+
+$ git show codigo do commit
+    |-> exibe o que foi modificado no commit
+
+
+$ git diff (bom usar antes de comentar)
+    |-> Mostra as modificações
+    |_Opções
+        |->  --name-only (mostra somente o nome do arquivo modificado)
+
+
+$ git checkout nomedoarquivo
+    |-> Retorna o arquivbo para antes da edição
+
+
+$ git reset HEAD
+    |-> Tira o arquivo de pronto (depois que da um add) para poder editar 
+    |_Opções
+        |->  --soft "hash anterio do arquivo" (pega as modificações e mata o commit feito voltando para o unstage pronto para ser commitado dnv)
+        |->  --mixed "hash anterio do arquivo" (Mata o commit e volta os arquivo para op modif)
+        |->  --hard "hash anterio do arquivo" (Ignora o commit e tudo o que foi feito nele)
+
+$ git remote add "nome para reconhece o remoto vem geralmente como origim" "ssh que vai gerar no novo repositório"
+    |-> Faz a conexçaõ do Git com o Github
+
+$ git remote ou $ git remote -v
+    |-> Mostra mais informações
+
+
+$ $ git push -u origin master
+    |-> Envia seus arquivos para o repositório do Github
+
+
+$ git push origin master
+    |-> faz atualização no repositorio remoto
+
+
+$ git clone git@github.com:marcos551/curso-git.git git-curso-clone
+    |-> Clona repositorios
+
+
+$ git checkout -b nomdobranch
+    |-> Cria um novo branch e ja inicializa
+
+$ git branch 
+    |-> Mostra as branchs que tem e qual esta utilizando
+
+$ git checlout nomdobranch
+    |-> usa o branch que é informado 
+
+
+$ git branch -D nomdobranch
+    |-> Deleta o branch selecionado
+
+
+$ git merge nomdobranch
+    |-> Junção dos branchs deixando historico intacto mas não linear
+
+
+$ git rebase nomdobranch 
+    |-> Junção dos branchs deixando linear mas com o historico afetado
+
+
